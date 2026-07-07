@@ -16,7 +16,7 @@ function ResumeUpload() {
   const fetchResume = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/resume/${user.id}`
+        `https://placement-assistant-production.up.railway.app/api/resume/${user.id}`
       );
 
       setResume(res.data);
@@ -40,7 +40,7 @@ function ResumeUpload() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/resume",
+        "https://placement-assistant-production.up.railway.app/api/resume",
         formData
       );
 
@@ -87,7 +87,7 @@ function ResumeUpload() {
           </p>
 
           <a
-            href={`http://localhost:5000/uploads/${resume.resume_path}`}
+            href={`https://placement-assistant-production.up.railway.app/uploads/${resume.resume_path}`}
             target="_blank"
             rel="noreferrer"
           >

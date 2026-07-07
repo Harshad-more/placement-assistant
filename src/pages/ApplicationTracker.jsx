@@ -36,7 +36,7 @@ function ApplicationTracker() {
         }
 
         const res = await axios.get(
-          `http://localhost:5000/api/applications/${user.id}`
+          `https://placement-assistant-production.up.railway.app/api/applications/${user.id}`
         );
 
         setApplications(res.data);
@@ -73,7 +73,7 @@ function ApplicationTracker() {
         }
 
         await axios.post(
-          "http://localhost:5000/api/applications",
+          "https://placement-assistant-production.up.railway.app/api/applications",
           {
             ...formData,
             user_id: user.id,
@@ -102,7 +102,7 @@ function ApplicationTracker() {
     async (id) => {
       try {
         await axios.delete(
-          `http://localhost:5000/api/applications/${id}`
+          `https://placement-assistant-production.up.railway.app/api/applications/${id}`
         );
 
         fetchApplications();
@@ -115,7 +115,7 @@ function ApplicationTracker() {
     async (id, status) => {
       try {
         await axios.put(
-          `http://localhost:5000/api/applications/${id}`,
+          `https://placement-assistant-production.up.railway.app/api/applications/${id}`,
           { status }
         );
 

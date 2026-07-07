@@ -23,7 +23,7 @@ function Resources() {
       try {
         const res =
           await axios.get(
-            "http://localhost:5000/api/resources"
+            "https://placement-assistant-production.up.railway.app/api/resources"
           );
 
         setResources(res.data);

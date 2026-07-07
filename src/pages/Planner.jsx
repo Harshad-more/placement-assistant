@@ -22,7 +22,7 @@ function Planner() {
   const fetchTasks = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/planner/${user.id}`
+        `https://placement-assistant-production.up.railway.app/api/planner/${user.id}`
       );
 
       setTasks(res.data);
@@ -43,7 +43,7 @@ function Planner() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/planner",
+        "https://placement-assistant-production.up.railway.app/api/planner",
         {
           task,
           task_date: taskDate,
@@ -71,7 +71,7 @@ function Planner() {
 
       try {
         await axios.put(
-          `http://localhost:5000/api/planner/${id}`,
+          `https://placement-assistant-production.up.railway.app/api/planner/${id}`,
           {
             status: newStatus,
           }
@@ -88,7 +88,7 @@ function Planner() {
   ) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/planner/${id}`
+        `https://placement-assistant-production.up.railway.app/api/planner/${id}`
       );
 
       fetchTasks();

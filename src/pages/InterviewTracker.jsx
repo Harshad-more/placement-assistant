@@ -31,7 +31,7 @@ function InterviewTracker() {
 
         const res =
           await axios.get(
-            `http://localhost:5000/api/interview/${user.id}`
+            `https://placement-assistant-production.up.railway.app/api/interview/${user.id}`
           );
 
         setQuestions(res.data);
@@ -61,7 +61,7 @@ function InterviewTracker() {
           );
 
         await axios.post(
-          "http://localhost:5000/api/interview",
+          "https://placement-assistant-production.up.railway.app/api/interview",
           {
             ...formData,
             user_id: user.id,
@@ -83,7 +83,7 @@ function InterviewTracker() {
   const handleDelete =
     async (id) => {
       await axios.delete(
-        `http://localhost:5000/api/interview/${id}`
+        `https://placement-assistant-production.up.railway.app/api/interview/${id}`
       );
 
       fetchQuestions();
@@ -92,7 +92,7 @@ function InterviewTracker() {
   const handleStatusChange =
     async (id, status) => {
       await axios.put(
-        `http://localhost:5000/api/interview/${id}`,
+        `https://placement-assistant-production.up.railway.app/api/interview/${id}`,
         { status }
       );
 

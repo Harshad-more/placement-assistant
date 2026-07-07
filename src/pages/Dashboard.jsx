@@ -26,7 +26,7 @@ function Dashboard() {
       if (!user) return;
 
       const res = await axios.get(
-        `http://localhost:5000/api/applications/${user.id}`
+        `https://placement-assistant-production.up.railway.app/api/applications/${user.id}`
       );
 
       setApplications(res.data);

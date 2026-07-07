@@ -23,7 +23,7 @@ function Register() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/register",
+        "https://placement-assistant-production.up.railway.app/api/register",
         form
       );
 

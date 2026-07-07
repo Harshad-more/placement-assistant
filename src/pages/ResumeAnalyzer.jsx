@@ -29,7 +29,7 @@ function ResumeAnalyzer() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/analyze-resume",
+        "https://placement-assistant-production.up.railway.app/api/analyze-resume",
         formData
       );
 
